@@ -2,16 +2,17 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Flask",
+            "name": "Python: Flask with Waitress",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/FLASK_APP/app.py",
+            "program": "${workspaceFolder}/path/to/your/app.py",  // Update with the correct path to your app.py
             "args": [],
             "env": {
-                "FLASK_APP": "app.py",  // Assuming your main Flask app is in app.py
-                "FLASK_ENV": "development"
+                "FLASK_APP": "app.py",
+                "FLASK_ENV": "development",
+                "FLASK_RUN_PORT": "8080"  // Port where Waitress will serve your app
             },
-            "cwd": "${workspaceFolder}/FLASK_APP",
+            "cwd": "${workspaceFolder}",
             "stopOnEntry": false,
             "pythonPath": "${config:python.pythonPath}",
             "debugOptions": [
